@@ -1,0 +1,18 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input,button{
+    width: 20vw;
+}
+em{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+label{
+    padding: 2vh 0px 0px 0px
+}
