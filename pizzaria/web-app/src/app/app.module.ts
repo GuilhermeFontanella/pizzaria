@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { Input, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -8,12 +9,16 @@ import { ButtonModule } from 'primeng/button';
 import { Ripple, RippleModule } from 'primeng/ripple';
 import { LoginComponent } from './login/login.component';
 import {InputTextModule} from 'primeng/inputtext';
-
+import { CadastroComponent } from './cadastro/cadastro.component';
+import { HttpClientModule } from '@angular/common/http';
+import {PasswordModule} from 'primeng/password';
+import {InputMaskModule} from 'primeng/inputmask';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    CadastroComponent
   ],
   imports: [
     BrowserModule,
@@ -22,6 +27,10 @@ import {InputTextModule} from 'primeng/inputtext';
     ButtonModule,
     RippleModule,
     InputTextModule,
+    RouterModule,
+    HttpClientModule,
+    PasswordModule,
+    InputMaskModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
