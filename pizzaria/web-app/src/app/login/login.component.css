@@ -1,18 +1,9 @@
-.container{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.background {
+    background-image: url("https://homepizza.net.br/wp-content/uploads/2015/06/870852-pizza-wallpaper.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-input,button{
-    width: 20vw;
-}
-em{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-label{
-    padding: 2vh 0px 0px 0px
+
+::ng-deep .p-card-content {
+    padding: 2rem 0rem 0rem 0rem !important;
 }

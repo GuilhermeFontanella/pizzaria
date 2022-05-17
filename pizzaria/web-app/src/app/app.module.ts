@@ -8,6 +8,8 @@ import { ButtonModule } from 'primeng/button';
 import { Ripple, RippleModule } from 'primeng/ripple';
 import { LoginComponent } from './login/login.component';
 import {InputTextModule} from 'primeng/inputtext';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -22,6 +24,9 @@ import {InputTextModule} from 'primeng/inputtext';
     ButtonModule,
     RippleModule,
     InputTextModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
