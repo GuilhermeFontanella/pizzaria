@@ -14,3 +14,13 @@ em{
 input,button{
     width: 30vw;
 }
+p-card{
+    max-width: 600px;
+}
+.row{
+    margin: 0px;
+    padding: 0px;
+}
+a{
+    text-decoration: inherit;
+}

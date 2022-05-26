@@ -1,56 +1,62 @@
 <div class="container">
-    <div class="p-grid">
-        <div class="p-col-6">
-            <p-card class="pcard">
-                <button id="botaoicone" pButton pRipple type="button" icon="pi pi-angle-left" class="p-button-rounded p-button-danger p-button-text"></button><br/>
-                <em>Digite seus dados para continuar</em><br/>
-                <div>
-                    <label for="name">Nome</label><br/>
-                    <input type="text" id="name" pInputText="value1"> 
-                </div>
-                <div>
-                    <label for="lastname">Sobrenome</label><br/>
-                    <input type="text" id="lastname" pInputText="value1"> 
+    <p-card class="pcard">
+       <a href="http://localhost:4200"><button id="botaoicone" pButton pRipple type="button" icon="pi pi-angle-left"
+            class="p-button-rounded p-button-danger p-button-text"></button> </a> <br />
+
+        <em>Digite seus dados para continuar</em><br />
+        <div class="row">
+            <div class="p-fluid grid col-12">
+                <label for="name">Nome</label><br />
+                <input [(ngModel)]="nome" type="text" id="name" pInputText="value1">
+            </div>
+            <div class="p-fluid grid col-12">
+                <label for="lastname">Sobrenome</label><br />
+                <input [(ngModel)]="sobrenome" type="text" id="lastname" pInputText="value1">
+            </div>
+
+            <div class="row">
+                <div class="p-fluid grid col-6">
+                    <label for="date">Data de nascimento</label><br />
+                    <p-inputMask [(ngModel)]="nascimento" id="date" mask="99/99/9999" placeholder="99/99/9999" slotChar="mm/dd/yyyy">
+                    </p-inputMask>
                 </div>
 
-                <div class="p-fluid grid">
-                    <div class="col-12 md:col-6 lg:col-4">
-                        <label for="date">Data de nascimento</label><br/>
-                        <p-inputMask id="date" mask="99/99/9999" placeholder="99/99/9999" slotChar="mm/dd/yyyy"></p-inputMask>
-                    </div>
+                <div class="p-fluid grid col-6">
+                    <label for="number">Número de celular</label><br />
+                    <p-inputMask [(ngModel)]="celular" id="number" mask="99-999999" placeholder="99-999999"></p-inputMask>
+                </div>
+            </div>
 
-                    <div class="col-12 md:col-6 lg:col-4">
-                        <label for="number">Número de celular</label><br/>
-                        <p-inputMask id="number" mask="99-999999" placeholder="99-999999"></p-inputMask>
-                    </div>
+            <div class="p-fluid grid col-12">
+                <label for="email">E-mail</label><br />
+                <input [(ngModel)]="email" type="text" id="email" pInputText="value1">
+            </div>
+            <div class="p-fluid grid col-12">
+                <label for="emailvalid">Confirme seu E-mail</label><br />
+                <input type="text" id="emailvalid" pInputText="value1">
+            </div>
+
+
+            <div class="p-fluid grid col-12">
+                <label for="username2" class="block">Nome de Usuário</label><br />
+                <input [(ngModel)]="usuario" type="text"
+                    pInputText /><br />
+            </div>
+
+            <div class="row">
+                <div class="p-fluid grid col-6">
+                    <label for="password">Digite sua senha</label><br />
+                    <p-password [(ngModel)]="senha" id="password" [toggleMask]="true"></p-password>
                 </div>
-                
-                <div>
-                    <label for="email">E-mail</label><br/>
-                    <input type="text" id="email" pInputText="value1"> 
-                </div>
-                <div>
-                    <label for="emailvalid">Confirme seu E-mail</label><br/>
-                    <input type="text" id="emailvalid" pInputText="value1"> 
-                </div>
-                <div class="field">
-                    <label for="username2" class="block">Nome de Usuário</label><br/>
-                    <input id="username2" type="username" aria-describedby="username2-help" class="ng-invalid ng-dirty" pInputText /><br/>
-                    <small id="username2-help" class="p-error block">Username is not available.</small>
-                </div>
-                <div class="p-fluid grid">
-                    <label for="password">Digite sua senha</label><br/>
-                    <p-password id="password" [toggleMask]="true"></p-password>
-                </div>
-                <div class="p-fluid grid">
-                    <label for="passwordvalid">Digite sua senha novamente</label><br/>
+                <div class="p-fluid grid col-6">
+                    <label for="passwordvalid">Digite sua senha novamente</label><br />
                     <p-password id="passwordvalid" [toggleMask]="true"></p-password>
                 </div>
-                <br/>
-                <div>
-                    <button pButton pRipple type="button" label="Continuar" class="p-button-danger"></button>
-                </div>
-            </p-card>
+            </div>
+            <br />
+            <div class="p-fluid grid col-12">
+                <button (click)="cadastrar()" pButton pRipple type="button" label="Continuar" class="p-button-danger"></button>
+            </div>
         </div>
-    </div>
+    </p-card>
 </div>
