@@ -1,3 +1,5 @@
+
+import { MenuComponent } from './menu/menu.component';
 import { RouterModule } from '@angular/router';
 import { Input, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,12 +17,14 @@ import {PasswordModule} from 'primeng/password';
 import {InputMaskModule} from 'primeng/inputmask';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MenubarModule} from 'primeng/menubar';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    CadastroComponent
+    CadastroComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +39,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     InputMaskModule,
     FormsModule,
     BrowserAnimationsModule,
+    MenubarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
