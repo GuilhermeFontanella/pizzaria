@@ -1,19 +1,24 @@
 {
-  "posts": [
+  "users": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "nome": "Vinicius",
+      "sobrenome": "de Castro",
+      "nascimento": "02/05/2052",
+      "celular": "20-205200",
+      "email": "viniciuspinheiro-_@hotmail.com",
+      "usuario": "Vinicius Pinheiro de Castro",
+      "senha": "123456",
+      "id": 1
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "nome": "muleke",
+      "sobrenome": "da silva",
+      "nascimento": "26/26/6126",
+      "celular": "26-266161",
+      "email": "mlk@orkut.com",
+      "usuario": "mlkin",
+      "senha": "123456",
+      "id": 2
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

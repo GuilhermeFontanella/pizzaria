@@ -1,0 +1,26 @@
+<div class="container">
+            <p-card class="pcard"> 
+                <div class="row">
+                    <button id="botaoicone" pButton pRipple type="button" icon="pi pi-angle-left" class="p-button-rounded p-button-danger p-button-text"></button>
+                    <div *ngIf="!usuarioCadastrado" class="p-fluid grid col-12" style="margin:15px 0px 15px 0px"> 
+                        <span class="p-float-label">                 
+                            <input [(ngModel)]="email" type="text" pInputText>
+                            <label for="float-input-invalid">Informe o seu e-mail para continuar</label>         
+                        </span>
+                    </div>
+                    <div *ngIf="usuarioCadastrado" class="p-fluid grid col-12"> 
+                        <button id="botaoicone" pButton pRipple type="button" icon="pi pi-angle-left" class="p-button-rounded p-button-danger p-button-text"></button>
+                        <span class="p-float-label">
+                                               
+                            <input [(ngModel)]="password" type="password" pInputText>
+                            <label for="float-input-invalid">Digite sua senha</label>         
+                        </span>
+                    </div>
+                    <div class="p-fluid grid col-12">
+                        <button pButton pRipple type="button" label="Continuar" class="p-button-danger" (click)="login()"></button>
+                    </div>
+                </div>      
+                <br/>
+            </p-card>
+</div>
+
