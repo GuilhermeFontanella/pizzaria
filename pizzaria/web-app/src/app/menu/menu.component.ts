@@ -21,10 +21,12 @@ export class MenuComponent implements OnInit {
       {
         label: 'Cardápio',
         icon:'pi pi-book',
+        url:'http://localhost:4200/cardapio',
       },
       {
         label: 'Unidades',
         icon:'pi pi-globe',
+        url:'http://localhost:4200/unidades',
       },
       {
         label: 'Dúvidas Frequentes',
@@ -33,6 +35,7 @@ export class MenuComponent implements OnInit {
       {
         label: 'Entrar/Cadastrar',
         icon:' pi pi-user',
+        url:'http://localhost:4200',
       },
       {
         icon:' pi pi-instagram',
