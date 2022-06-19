@@ -1,0 +1,53 @@
+
+<p-card subheader="Pizza calabresa" type="button" (click)="showDialog()" [style]="{width: '360px'}" styleClass="p-card-shadow">
+    <ng-template pTemplate="header">
+        <img alt="Card" src="">
+    </ng-template>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+        quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
+    
+    <ng-template pTemplate="footer">
+        A partir de R$ 100,00
+    </ng-template>
+</p-card>
+
+<p-dialog  [(visible)]="display" [style]="{width: '75vw'}">
+        <header>primeiro card</header>
+        <ng-template pTemplate="header">
+            <img  src="">
+        </ng-template>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+            quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
+        
+        <ng-template pTemplate="footer">
+            A partir de R$ 100,00
+        </ng-template>
+</p-dialog>
+
+
+
+<p-card subheader="Pizza de Frango" type="button" (click)="showDialog()" [style]="{width: '360px'}" styleClass="p-card-shadow">
+    <ng-template pTemplate="header">
+        <img alt="Card" src="">
+    </ng-template>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+        quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
+        
+     <ng-template pTemplate="footer">
+         A partir de R$ 100,00
+    </ng-template>
+</p-card>
+    
+<p-dialog  [(visible)]="display" [style]="{width: '75vw'}">
+     <header>Segundo Card</header>
+     <ng-template pTemplate="header">
+        <img  src="">
+     </ng-template>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+             quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
+            
+     <ng-template pTemplate="footer">
+        A partir de R$ 100,00
+     </ng-template>
+</p-dialog>
+    
