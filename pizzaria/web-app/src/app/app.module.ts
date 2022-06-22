@@ -1,3 +1,4 @@
+import { CardapioModule } from './cardapio/cardapio.module';
 
 import { MenuComponent } from './menu/menu.component';
 import { NgModule } from '@angular/core';
@@ -27,7 +28,6 @@ import { UnidadesComponent } from './unidades/unidades.component';
     LoginComponent,
     CadastroComponent,
     MenuComponent,
-    CardapioComponent,
     UnidadesComponent,
   ],
   imports: [
@@ -45,6 +45,7 @@ import { UnidadesComponent } from './unidades/unidades.component';
     BrowserAnimationsModule,
     MenubarModule,
     DialogModule,
+    CardapioModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

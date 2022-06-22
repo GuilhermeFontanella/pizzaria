@@ -1,19 +1,19 @@
 {
-  "posts": [
+  "pizzas":[
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "id":0,
+      "nome":"Calabresa",
+      "preço":"55,55"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id":1,
+      "nome":"Frango",
+      "preço":"55,55"
+    },
+    {
+      "id":2,
+      "nome":"Presunto",
+      "preço":"55,55"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
