@@ -1,0 +1,29 @@
+<p>unidades works!</p>
+
+<p-card subheader="Unidade Palhoça" type="button" (click)="showDialog()" [style]="{width: '360px'}" styleClass="p-card-shadow">
+    <ng-template pTemplate="header">
+        <img alt="Card" src="">
+    </ng-template>
+    <p>Espaço destinado para colocar imagem da entrada do restaurante
+        e seu endereço.<br/>
+        - Nome da Unidade <br/>
+        - Rua: <br/>
+        - Bairro:
+    </p>
+</p-card>
+
+<p-dialog  [(visible)]="display" [style]="{width: '75vw'}">
+        <header>Unidade palhoça</header>
+        <ng-template pTemplate="header">
+            <img  src="">
+        </ng-template>
+        <p> 
+            Espaço para colocar fotos da unidade escolhida
+        </p>
+</p-dialog>
+
+<p>Mais informações sobre o restaurante, como: <br/>
+    - Sobre pedidos <br/>
+    - Como é feito a comida <br/>
+    - E algum recado que o restaurante queira passar para o cliente
+</p>
