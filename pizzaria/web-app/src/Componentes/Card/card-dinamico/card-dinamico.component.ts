@@ -12,8 +12,6 @@ export class CardDinamicoComponent implements OnInit {
   display = true;
 
   ngOnInit(): void {
-    console.log(this.pizzas)
-
   }
   showDialog() {
     this.display = true;

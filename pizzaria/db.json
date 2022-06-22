@@ -3,17 +3,17 @@
     {
       "id":0,
       "nome":"Calabresa",
-      "preço":"55,55"
+      "preco":55.55
     },
     {
       "id":1,
       "nome":"Frango",
-      "preço":"55,55"
+      "preco":55.55
     },
     {
       "id":2,
       "nome":"Presunto",
-      "preço":"55,55"
+      "preco":30.33
     }
   ]
 }

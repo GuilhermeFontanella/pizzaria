@@ -20,17 +20,17 @@
     {
       "id":0,
       "nome":"Calabresa",
-      "preco":"55,55"
+      "preco":55.55
     },
     {
       "id":1,
       "nome":"Frango",
-      "preco":"55,55"
+      "preco":55.55
     },
     {
       "id":2,
       "nome":"Presunto",
-      "preco":"55,55"
+      "preco":30.33
     }
   ]
 }

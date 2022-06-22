@@ -1,17 +1,25 @@
-<div *ngFor="let pizza of pizzas" >
-<app-card-dinamico [pizzas]="pizza"></app-card-dinamico>
+<div class="container">
+    <div class="row">
+        <div class="col-12" style="margin-top: 1rem; margin-bottom: 1rem;">
+            <h1>Cardápio</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4"*ngFor="let pizza of pizzas" >
+            <app-card-dinamico [pizzas]="pizza" (click)="showDialog(pizza)"></app-card-dinamico>
+        </div>
+    </div>
 </div>
 
-<p-dialog  [(visible)]="display" [style]="{width: '75vw'}">
-        <header>primeiro card</header>
+<p-dialog  [(visible)]="display" [style]="{width: '30vw'}">
         <ng-template pTemplate="header">
-            <img  src="../../assets/imagemPizzas/pizzaCalabresa.jpg">
+            <h1>{{dadosModal.nome}}</h1>  
         </ng-template>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+        <img src="../../assets/imagemPizzas/pizzaCalabresa.jpg" style="width: 80%; margin: auto; display: flex; margin-bottom: 1rem;">
+        <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
             quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
-        
         <ng-template pTemplate="footer">
-            A partir de R$ 100,00
+            <span style="color: rgb(34, 175, 34);">A partir de {{ dadosModal.preco | currency:'BRL' }}</span>
         </ng-template>
 </p-dialog>
 
