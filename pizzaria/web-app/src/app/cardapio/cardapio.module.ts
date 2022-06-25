@@ -4,6 +4,7 @@ import { CardDinamicoComponent } from './../../Componentes/Card/card-dinamico/ca
 import { CardapioComponent } from './cardapio.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TooltipModule } from 'primeng/tooltip';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { CommonModule } from '@angular/common';
     CommonModule,
     CardDinamicoModule,
     DialogModule,
+    TooltipModule
   ]
 })
 export class CardapioModule { }

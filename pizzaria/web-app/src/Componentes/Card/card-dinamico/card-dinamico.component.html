@@ -1,11 +1,21 @@
-<p-card subheader="{{pizzas.nome}}" type="button" (click)="showDialog()" [style]="{width: '360px'}" styleClass="p-card-shadow">
+<p-card header="{{pizzas.nome}}" type="button" (click)="showDialog()" [style]="{width: '360px'}" styleClass="p-card-shadow">
     <ng-template pTemplate="header">
-        <img alt="Card" src="../../assets/imagemPizzas/pizzaCalabresa.jpg">
+        <img alt="Card" src="{{pizzas.image}}">
     </ng-template>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
         quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
     
     <ng-template pTemplate="footer">
-        A partir de {{pizzas.preco | currency:'BRL' }}
+        <div style="display: flex; justify-content:space-around;">
+            <span>
+                P <span class="text-bold">{{pizzas.precoP | currency:'BRL' }}</span>
+            </span>
+            <span>
+                M <span class="text-bold">{{pizzas.precoM | currency:'BRL' }}</span>
+            </span>
+            <span>
+                G <span class="text-bold">{{pizzas.precoG | currency:'BRL' }}</span>
+            </span>
+        </div>
     </ng-template>
 </p-card>

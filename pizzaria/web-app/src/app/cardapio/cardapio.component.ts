@@ -13,7 +13,9 @@ export class CardapioComponent implements OnInit {
   dadosModal = {
     id: 0,
     nome: '',
-    preco: ''
+    precoP: '',
+    precoM: '',
+    precoG: ''
   };
 
   constructor(private cardapioService:CardapioService) { }
@@ -22,7 +24,7 @@ export class CardapioComponent implements OnInit {
     this.getListasdePizzas();
   }
   
-  showDialog(event: {id: number, nome: string, preco: string}) {
+  showDialog(event: {id: number, nome: string, precoP: string, precoM: string, precoG: string}) {
     this.display = true;
     this.dadosModal = event;
     console.log(this.dadosModal)

@@ -1,17 +1,17 @@
 <div class="container">
     <div class="row">
         <div class="col-12" style="margin-top: 1rem; margin-bottom: 1rem;">
-            <h1>Cardápio</h1>
+            <h1 class="header-white">Cardápio</h1>
         </div>
     </div>
     <div class="row">
         <div class="col-4"*ngFor="let pizza of pizzas" >
-            <app-card-dinamico [pizzas]="pizza" (click)="showDialog(pizza)"></app-card-dinamico>
+            <app-card-dinamico [pizzas]="pizza" (click)="showDialog(pizza)" class="animate__slideOutUp"></app-card-dinamico>
         </div>
     </div>
 </div>
 
-<p-dialog  [(visible)]="display" [style]="{width: '30vw'}">
+<p-dialog  [(visible)]="display" [style]="{width: '30vw'}" [modal]="true" [draggable]="false" [resizable]="false">
         <ng-template pTemplate="header">
             <h1>{{dadosModal.nome}}</h1>  
         </ng-template>
@@ -19,7 +19,20 @@
         <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
             quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
         <ng-template pTemplate="footer">
-            <span style="color: rgb(34, 175, 34);">A partir de {{ dadosModal.preco | currency:'BRL' }}</span>
+            <span style="color: rgb(34, 175, 34);">
+                <div style="display: flex; justify-content:space-around;">
+            <span class="span-dialog" pTooltip="Selecionar Tamanho" tooltipPosition="bottom" [showDelay]="300">
+                P <span class="text-bold">{{dadosModal.precoP | currency:'BRL' }}</span>
+            </span>
+            <span class="span-dialog" pTooltip="Selecionar Tamanho" tooltipPosition="bottom" [showDelay]="300">
+                M <span class="text-bold">{{dadosModal.precoM | currency:'BRL' }}</span>
+            </span>
+            <span class="span-dialog" pTooltip="Selecionar Tamanho" tooltipPosition="bottom" [showDelay]="300">
+                G <span class="text-bold">{{dadosModal.precoG | currency:'BRL' }}</span>
+            </span>
+        </div>
+            </span>
         </ng-template>
 </p-dialog>
+
 

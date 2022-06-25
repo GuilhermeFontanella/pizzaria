@@ -20,17 +20,74 @@
     {
       "id":0,
       "nome":"Calabresa",
-      "preco":55.55
+      "precoP":55.55,
+      "precoM":65.55,
+      "precoG":75.55,
+      "image": "../../assets/imagemPizzas/pizzaCalabresa.jpg"
     },
     {
       "id":1,
       "nome":"Frango",
-      "preco":55.55
+      "precoP":55.55,
+      "precoM":65.55,
+      "precoG":75.55,
+      "image": "../../assets/imagemPizzas/frango.jpg"
     },
     {
       "id":2,
       "nome":"Presunto",
-      "preco":30.33
+      "precoP":30.33,
+      "precoM":65.55,
+      "precoG":75.55,
+      "image": "../../assets/imagemPizzas/presunto.jpg"
+    },
+    {
+      "id":0,
+      "nome":"Calabresa",
+      "precoP":55.55,
+      "precoM":65.55,
+      "precoG":75.55,
+      "image": "../../assets/imagemPizzas/pizzaCalabresa.jpg"
+    },
+    {
+      "id":1,
+      "nome":"Frango",
+      "precoP":55.55,
+      "precoM":65.55,
+      "precoG":75.55,
+      "image": "../../assets/imagemPizzas/frango.jpg"
+    },
+    {
+      "id":2,
+      "nome":"Presunto",
+      "precoP":30.33,
+      "precoM":65.55,
+      "precoG":75.55,
+      "image": "../../assets/imagemPizzas/presunto.jpg"
+    },
+    {
+      "id":0,
+      "nome":"Calabresa",
+      "precoP":55.55,
+      "precoM":65.55,
+      "precoG":75.55,
+      "image": "../../assets/imagemPizzas/pizzaCalabresa.jpg"
+    },
+    {
+      "id":1,
+      "nome":"Frango",
+      "precoP":55.55,
+      "precoM":65.55,
+      "precoG":75.55,
+      "image": "../../assets/imagemPizzas/frango.jpg"
+    },
+    {
+      "id":2,
+      "nome":"Presunto",
+      "precoP":30.33,
+      "precoM":65.55,
+      "precoG":75.55,
+      "image": "../../assets/imagemPizzas/presunto.jpg"
     }
   ]
 }

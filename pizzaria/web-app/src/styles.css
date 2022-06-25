@@ -1,8 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~animate.css/animate.min.css';
+
 .max-width {
     width: 100%;
 }
 
 .button-area {
     margin: 2rem 0rem 2rem 0rem;
+}
+
+body {
+    background: rgb(3,3,3);
+    background: radial-gradient(circle, rgba(3,3,3,1) 0%, rgba(255,0,0,1) 100%);
+    
+}
+
+.header-white {
+    color: white;
+}
+
+.text-bold {
+    font-weight: bold !important;
 }
