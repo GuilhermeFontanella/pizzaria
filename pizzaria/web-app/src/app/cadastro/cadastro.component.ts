@@ -1,5 +1,6 @@
 import { CadastroService } from './cadastro.service';
 import { Component, OnInit } from '@angular/core';
+import {of} from 'rxjs';
 
 export interface Usuario{
   id?:number;
@@ -27,11 +28,13 @@ export class CadastroComponent implements OnInit {
   usuario:string="";
   senha:string="";
   
-  constructor(private cadastroService:CadastroService) { }
+  constructor(
+    private cadastroService: CadastroService
+    ) { }
 
-  ngOnInit(): void {
-  }
-  cadastrar(){
+  ngOnInit(): void {}
+
+  cadastrar(): void {
     this.novoUsuario= {
       nome:this.nome, 
       sobrenome:this.sobrenome,

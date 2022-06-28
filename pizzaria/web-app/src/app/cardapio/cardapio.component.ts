@@ -1,5 +1,6 @@
 import { CardapioService } from './cardapio.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
+import { ActionTypes, eventDispatcher, store } from '../diretorio/actions';
 
 
 @Component({
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cardapio.component.css']
 })
 export class CardapioComponent implements OnInit {
-  pizzas:any[]=[];
+  pizzas: any[] = [];
   display: boolean = false;
   dadosModal = {
     id: 0,
@@ -17,10 +18,19 @@ export class CardapioComponent implements OnInit {
     precoM: '',
     precoG: ''
   };
+  searchInputFromMenu: any;
 
-  constructor(private cardapioService:CardapioService) { }
+  constructor(private cardapioService: CardapioService) {
+    store.subscribe((state) => {
+      this.searchInputFromMenu = state;
+      console.log(this.searchInputFromMenu);
+      this.getPizzaPeloNome(this.searchInputFromMenu);
+    })
+  }
 
   ngOnInit(): void {
+    eventDispatcher.next({ type: ActionTypes.BUCAR });
+    console.log(this.searchInputFromMenu);
     this.getListasdePizzas();
   }
   
@@ -30,9 +40,22 @@ export class CardapioComponent implements OnInit {
     console.log(this.dadosModal)
     
 }
-  getListasdePizzas(){
-    this.cardapioService.getListaPizzas().subscribe((Response)=>{
-      this.pizzas=Response
+  getListasdePizzas() {
+    this.cardapioService.getListaPizzas().subscribe((response) => {
+      this.pizzas = response
     })
+  }
+
+  getPizzaPeloNome(input: string) {
+    if (input) {
+      this.cardapioService.getListaPizzasByInputText(input).subscribe((response) => {
+        this.pizzas = response;
+        console.log(response);
+        
+      })
+    }
+    if (!input) {
+      this.getListasdePizzas();
+    }
   }
 }

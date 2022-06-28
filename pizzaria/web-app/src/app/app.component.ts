@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActionTypes, eventDispatcher, store } from './diretorio/actions';
 
 @Component({
   selector: 'app-root',

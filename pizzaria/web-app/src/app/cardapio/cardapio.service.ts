@@ -8,9 +8,13 @@ import { Injectable } from '@angular/core';
 export class CardapioService {
   apiUrl:string='http://localhost:3000/pizzas';
 
-  constructor(private httpClient:HttpClient) {
-  }
-  getListaPizzas():Observable<any[]>{
+  constructor(private httpClient:HttpClient) {}
+
+  getListaPizzas(): Observable<any[]> {
     return this.httpClient.get<any[]>(`${this.apiUrl}`);
+  }
+
+  getListaPizzasByInputText(input: string): Observable<any[]> {
+    return this.httpClient.get<any[]>(`${this.apiUrl}?q=${input}`);
   }
 }

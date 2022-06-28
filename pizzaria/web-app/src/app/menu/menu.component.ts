@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { MenuItem } from 'primeng/api';
+import { ActionTypes, eventDispatcher, store } from '../diretorio/actions';
+
 
 @Component({
   selector: 'app-menu',
@@ -7,10 +9,12 @@ import { MenuItem } from 'primeng/api';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
+  @Output() searchInput = new EventEmitter();
   search: string = '';
   items: MenuItem[]=[]
   
-  constructor( ) {}
+  constructor( ) {
+  }
 
   ngOnInit(): void {
     this.items = [
@@ -41,5 +45,10 @@ export class MenuComponent implements OnInit {
         icon:' pi pi-instagram',
       },
     ]
+  }
+
+  buscar() {
+    this.searchInput.emit(this.search);
+    eventDispatcher.next({ type: ActionTypes.BUCAR, payload: this.search });
   }
 }
