@@ -23,23 +23,19 @@ export class CardapioComponent implements OnInit {
   constructor(private cardapioService: CardapioService) {
     store.subscribe((state) => {
       this.searchInputFromMenu = state;
-      console.log(this.searchInputFromMenu);
       this.getPizzaPeloNome(this.searchInputFromMenu);
     })
   }
 
   ngOnInit(): void {
     eventDispatcher.next({ type: ActionTypes.BUCAR });
-    console.log(this.searchInputFromMenu);
     this.getListasdePizzas();
   }
   
   showDialog(event: {id: number, nome: string, precoP: string, precoM: string, precoG: string}) {
     this.display = true;
-    this.dadosModal = event;
-    console.log(this.dadosModal)
-    
-}
+    this.dadosModal = event;    
+  }
   getListasdePizzas() {
     this.cardapioService.getListaPizzas().subscribe((response) => {
       this.pizzas = response
@@ -50,8 +46,6 @@ export class CardapioComponent implements OnInit {
     if (input) {
       this.cardapioService.getListaPizzasByInputText(input).subscribe((response) => {
         this.pizzas = response;
-        console.log(response);
-        
       })
     }
     if (!input) {

@@ -1,92 +1,116 @@
 {
-  "posts": [
+  "users": [
+    {
+      "id": 0,
+      "name": "Guilherme",
+      "lastName": "Fontanella",
+      "birthDate": "27/02/1994",
+      "email": "gui@b.com",
+      "image": "",
+      "password": "1234",
+      "level": 0
+    },
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "name": "Alane",
+      "lastName": "Fontanella",
+      "birthDate": "17/11/1989",
+      "email": "alane@hotmail.com",
+      "password": "1234",
+      "level": 1
+    },
+    {
+      "nome": "",
+      "sobrenome": "",
+      "nascimento": "",
+      "celular": "",
+      "email": "",
+      "usuario": "admin@themesbrand.com",
+      "senha": "123456",
+      "id": 2
+    },
+    {
+      "nome": "",
+      "sobrenome": "",
+      "nascimento": "",
+      "celular": "",
+      "email": "",
+      "usuario": "alane@gmail.com",
+      "senha": "1234",
+      "id": 3
     }
   ],
-  "comments": [
+  "pizzas": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  },
-  "pizzas":[
-    {
-      "id":0,
-      "nome":"Calabresa",
-      "precoP":55.55,
-      "precoM":65.55,
-      "precoG":75.55,
+      "id": 0,
+      "nome": "Calabresa",
+      "precoP": 55.55,
+      "precoM": 65.55,
+      "precoG": 75.55,
       "image": "../../assets/imagemPizzas/pizzaCalabresa.jpg"
     },
     {
-      "id":1,
-      "nome":"Frango",
-      "precoP":55.55,
-      "precoM":65.55,
-      "precoG":75.55,
+      "id": 1,
+      "nome": "Frango",
+      "precoP": 55.55,
+      "precoM": 65.55,
+      "precoG": 75.55,
       "image": "../../assets/imagemPizzas/frango.jpg"
     },
     {
-      "id":2,
-      "nome":"Presunto",
-      "precoP":30.33,
-      "precoM":65.55,
-      "precoG":75.55,
+      "id": 2,
+      "nome": "Presunto",
+      "precoP": 30.33,
+      "precoM": 65.55,
+      "precoG": 75.55,
       "image": "../../assets/imagemPizzas/presunto.jpg"
     },
     {
-      "id":0,
-      "nome":"Calabresa",
-      "precoP":55.55,
-      "precoM":65.55,
-      "precoG":75.55,
+      "id": 0,
+      "nome": "Calabresa",
+      "precoP": 55.55,
+      "precoM": 65.55,
+      "precoG": 75.55,
       "image": "../../assets/imagemPizzas/pizzaCalabresa.jpg"
     },
     {
-      "id":1,
-      "nome":"Frango",
-      "precoP":55.55,
-      "precoM":65.55,
-      "precoG":75.55,
+      "id": 1,
+      "nome": "Frango",
+      "precoP": 55.55,
+      "precoM": 65.55,
+      "precoG": 75.55,
       "image": "../../assets/imagemPizzas/frango.jpg"
     },
     {
-      "id":2,
-      "nome":"Presunto",
-      "precoP":30.33,
-      "precoM":65.55,
-      "precoG":75.55,
+      "id": 2,
+      "nome": "Presunto",
+      "precoP": 30.33,
+      "precoM": 65.55,
+      "precoG": 75.55,
       "image": "../../assets/imagemPizzas/presunto.jpg"
     },
     {
-      "id":0,
-      "nome":"Calabresa",
-      "precoP":55.55,
-      "precoM":65.55,
-      "precoG":75.55,
+      "id": 0,
+      "nome": "Calabresa",
+      "precoP": 55.55,
+      "precoM": 65.55,
+      "precoG": 75.55,
       "image": "../../assets/imagemPizzas/pizzaCalabresa.jpg"
     },
     {
-      "id":1,
-      "nome":"Frango",
-      "precoP":55.55,
-      "precoM":65.55,
-      "precoG":75.55,
+      "id": 1,
+      "nome": "Frango",
+      "precoP": 55.55,
+      "precoM": 65.55,
+      "precoG": 75.55,
       "image": "../../assets/imagemPizzas/frango.jpg"
     },
     {
-      "id":2,
-      "nome":"Presunto",
-      "precoP":30.33,
-      "precoM":65.55,
-      "precoG":75.55,
+      "id": 2,
+      "nome": "Presunto",
+      "precoP": 30.33,
+      "precoM": 65.55,
+      "precoG": 75.55,
       "image": "../../assets/imagemPizzas/presunto.jpg"
     }
   ]

@@ -12,4 +12,8 @@ export class LoginService {
   pesquisaEmail(params?:string):Observable<any[]>{
     return this.httpClient.get<any[]>(`${this.apiUrl}/users/${params}`)
   }
+
+  login(params: string):Observable<any>{
+    return this.httpClient.get<any>(`${this.apiUrl}/users/${params}`);
+  }
 }

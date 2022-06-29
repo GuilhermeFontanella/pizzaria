@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { ActionTypes, eventDispatcher, store } from './diretorio/actions';
+import { AfterContentChecked, AfterViewChecked, Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ActionTypes, eventDispatcher, store, User } from './diretorio/actions';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,27 @@ import { ActionTypes, eventDispatcher, store } from './diretorio/actions';
 })
 export class AppComponent {
   title = 'pizzaria';
+  userLoggedIn: any;
+  loggedUser: any;
 
-    ngOnInit() {}
+    constructor(
+      private route: ActivatedRoute,
+      private router: Router) {
+        store.subscribe((state) => {
+          if (!state) {
+            return;
+          } else {            
+            this.userLoggedIn = state;
+            this.loggedUser = sessionStorage.setItem('loggedUser', this.userLoggedIn);
+          }
+          
+        })
+      }
+
+    ngOnInit() {
+      eventDispatcher.next({ type: ActionTypes.LOGGED_IN_USER });  
+    }
+
+    
 }
 

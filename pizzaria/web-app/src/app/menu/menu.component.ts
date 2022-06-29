@@ -1,6 +1,6 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MenuItem } from 'primeng/api';
-import { ActionTypes, eventDispatcher, store } from '../diretorio/actions';
+import { ActionTypes, eventDispatcher, store, User } from '../diretorio/actions';
 
 
 @Component({
@@ -13,8 +13,7 @@ export class MenuComponent implements OnInit {
   search: string = '';
   items: MenuItem[]=[]
   
-  constructor( ) {
-  }
+  constructor( ) {}
 
   ngOnInit(): void {
     this.items = [
