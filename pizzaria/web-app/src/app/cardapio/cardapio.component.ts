@@ -1,6 +1,7 @@
 import { CardapioService } from './cardapio.service';
 import { Component, OnInit  } from '@angular/core';
 import { ActionTypes, eventDispatcher, store } from '../diretorio/actions';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -20,7 +21,11 @@ export class CardapioComponent implements OnInit {
   };
   searchInputFromMenu: any;
 
-  constructor(private cardapioService: CardapioService) {
+  constructor(
+    private cardapioService: CardapioService,
+    private router: Router,
+    private route: ActivatedRoute
+    ) {
     store.subscribe((state) => {
       this.searchInputFromMenu = state;
       this.getPizzaPeloNome(this.searchInputFromMenu);
@@ -51,5 +56,9 @@ export class CardapioComponent implements OnInit {
     if (!input) {
       this.getListasdePizzas();
     }
+  }
+
+  iniciarPedido(dadosModal: any) {
+    this.router.navigate(['pedido', {pizzaId: dadosModal.id}])
   }
 }

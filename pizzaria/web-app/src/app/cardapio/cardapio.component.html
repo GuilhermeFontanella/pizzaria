@@ -21,13 +21,13 @@
         <ng-template pTemplate="footer">
             <span style="color: rgb(34, 175, 34);">
                 <div style="display: flex; justify-content:space-around;">
-            <span class="span-dialog" pTooltip="Selecionar Tamanho" tooltipPosition="bottom" [showDelay]="300">
+            <span class="span-dialog" pTooltip="Selecionar Tamanho" tooltipPosition="bottom" [showDelay]="300" (click)="iniciarPedido(dadosModal)">
                 P <span class="text-bold">{{dadosModal.precoP | currency:'BRL' }}</span>
             </span>
-            <span class="span-dialog" pTooltip="Selecionar Tamanho" tooltipPosition="bottom" [showDelay]="300">
+            <span class="span-dialog" pTooltip="Selecionar Tamanho" tooltipPosition="bottom" [showDelay]="300" (click)="iniciarPedido(dadosModal)">
                 M <span class="text-bold">{{dadosModal.precoM | currency:'BRL' }}</span>
             </span>
-            <span class="span-dialog" pTooltip="Selecionar Tamanho" tooltipPosition="bottom" [showDelay]="300">
+            <span class="span-dialog" pTooltip="Selecionar Tamanho" tooltipPosition="bottom" [showDelay]="300" (click)="iniciarPedido(dadosModal)">
                 G <span class="text-bold">{{dadosModal.precoG | currency:'BRL' }}</span>
             </span>
         </div>

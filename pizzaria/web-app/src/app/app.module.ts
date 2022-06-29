@@ -21,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenubarModule } from 'primeng/menubar';
 import { CardapioComponent } from './cardapio/cardapio.component';
 import { UnidadesComponent } from './unidades/unidades.component';
+import { PedidoComponent } from './pedido/pedido.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { UnidadesComponent } from './unidades/unidades.component';
     CadastroComponent,
     MenuComponent,
     UnidadesComponent,
+    PedidoComponent,
   ],
   imports: [
     BrowserModule,
