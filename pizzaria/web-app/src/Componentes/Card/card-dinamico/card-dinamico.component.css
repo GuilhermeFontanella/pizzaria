@@ -14,3 +14,6 @@ p-card:hover {
     transform:scale3d(1.05, 1.05, 1.05);
 }
  
+::ng-deep .custom-spinner {
+    margin-top: 40px !important;
+}

@@ -10,11 +10,4 @@ export class CardapioService {
 
   constructor(private httpClient:HttpClient) {}
 
-  getListaPizzas(): Observable<any[]> {
-    return this.httpClient.get<any[]>(`${this.apiUrl}`);
-  }
-
-  getListaPizzasByInputText(input: string): Observable<any[]> {
-    return this.httpClient.get<any[]>(`${this.apiUrl}?q=${input}`);
-  }
 }

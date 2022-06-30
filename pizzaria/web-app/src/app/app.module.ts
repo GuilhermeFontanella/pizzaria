@@ -22,6 +22,7 @@ import { MenubarModule } from 'primeng/menubar';
 import { CardapioComponent } from './cardapio/cardapio.component';
 import { UnidadesComponent } from './unidades/unidades.component';
 import { PedidoComponent } from './pedido/pedido.component';
+import {SkeletonModule} from 'primeng/skeleton';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { PedidoComponent } from './pedido/pedido.component';
     MenubarModule,
     DialogModule,
     CardapioModule,
+    SkeletonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
