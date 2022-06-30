@@ -51,7 +51,9 @@ export class CardapioComponent implements OnInit {
 
   getPizzaPeloNome(input: string) {
     if (input) {
-      this.pizzaService.getListaPizzasByInputText(input).subscribe((response) => {
+      const primeiraLetra = input[0].toUpperCase();
+      let palavraCompleta = primeiraLetra + input.slice(1);
+      this.pizzaService.getListaPizzasByInputText(palavraCompleta).subscribe((response) => {
         this.pizzas = response;
       })
     }
