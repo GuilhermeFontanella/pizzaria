@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { PizzaService } from 'src/services/pizza.service';
 
 @Component({
@@ -9,6 +10,14 @@ import { PizzaService } from 'src/services/pizza.service';
 })
 export class PedidoComponent implements OnInit {
   idPizzaSelecionada: number = 0;
+  items = [{
+    label: '',
+  }];
+
+  data: any;
+  chartOptions: any;
+  subscription!: Subscription;
+  tamanhoPizza: string = '';
 
   constructor(
     private route: ActivatedRoute,
@@ -16,9 +25,39 @@ export class PedidoComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.items = [
+      {label: 'Tamanho e Sabores'},
+      {label: 'Adicionais e Borda'},
+      {label: 'Finalizar Pedido'}
+    ];
+
+    this.data = {
+      //labels: ['A','B'],
+      datasets: [
+          {
+            data: [50, 50],
+            backgroundColor: [
+                "#adadad",
+                "#adadad",
+
+            ],
+            hoverBackgroundColor: [
+                "#dddddd",
+                "#dddddd",
+
+            ]
+          }
+      ]
+  };
     const idPizza = this.route.snapshot.paramMap.get('pizzaId');
+    const tamanhoPizza = this.route.snapshot.paramMap.get('tamanhoPizza');
     if (idPizza) {
       this.getDadosPizza(+idPizza);
+    }
+
+    if (tamanhoPizza) {
+      this.tamanhoPizza = tamanhoPizza;
+      this.defineQtSabores(tamanhoPizza);
     }
   }
 
@@ -26,6 +65,45 @@ export class PedidoComponent implements OnInit {
     this.pizzaService.getPizzaById(idPizza).subscribe((response) => {
       this.idPizzaSelecionada = response;
     })
+  }
+
+  selecionaTamanho(event: any, value: string) {
+    this.defineQtSabores(value);
+  }
+
+  defineQtSabores(tamanhoPizza: string): void {
+    let tamanho = this.data.datasets[0].data;
+    if (tamanhoPizza === 'p') {
+      console.log('entrou aqui');
+      tamanho = [100];
+    }
+    if (tamanhoPizza === 'm' || tamanhoPizza === 'g') {
+      console.log('m ou g');
+      tamanho = [50, 50];
+    }
+    if (tamanhoPizza === 'gg') {
+      console.log('gg');
+      tamanho = [25, 25, 25, 25];
+    }
+
+    this.data = {
+      //labels: ['A','B'],
+      datasets: [
+          {
+            data: tamanho,
+            backgroundColor: [
+                "#adadad",
+                "#adadad",
+
+            ],
+            hoverBackgroundColor: [
+                "#dddddd",
+                "#dddddd",
+
+            ]
+          }
+      ]
+  };
   }
 
 }

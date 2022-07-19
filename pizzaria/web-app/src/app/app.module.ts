@@ -22,7 +22,11 @@ import { MenubarModule } from 'primeng/menubar';
 import { CardapioComponent } from './cardapio/cardapio.component';
 import { UnidadesComponent } from './unidades/unidades.component';
 import { PedidoComponent } from './pedido/pedido.component';
-import {SkeletonModule} from 'primeng/skeleton';
+import { SkeletonModule } from 'primeng/skeleton';
+import { StepsModule } from 'primeng/steps';
+import { ToastModule } from 'primeng/toast';
+import { ChartModule } from 'primeng/chart';
+import {RadioButtonModule} from 'primeng/radiobutton';
 
 @NgModule({
   declarations: [
@@ -49,7 +53,11 @@ import {SkeletonModule} from 'primeng/skeleton';
     MenubarModule,
     DialogModule,
     CardapioModule,
-    SkeletonModule
+    SkeletonModule,
+    StepsModule,
+    ToastModule,
+    ChartModule,
+    RadioButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
