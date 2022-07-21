@@ -27,13 +27,71 @@
             </div>
         </div>
         
-        <div class="col-12" style="max-width: 40%; margin: auto">
-            <p-chart type="pie" [data]="data" [options]="chartOptions"  [style]="{'width': '40%'}"></p-chart>
+        <div class="row">
+            <div class="col-7" style="max-width: 40%; margin: auto">
+                <p-chart type="pie" [data]="data" [options]="chartOptions"  [style]="{'width': '40%'}"></p-chart>
+            </div>
+            <div class="col-5">
+                <div class="header">
+                    <h1>Sabores Selecionados:</h1>
+                </div>
+                <div>
+                    <p-chips [(ngModel)]="values" *ngIf="showContent" (onFocus)="teste()"></p-chips>
+                </div>
+                <div class="row">
+                    <div class="col-12" style="margin-top: 30px;">
+                        <h5>Resumo do Pedido:</h5>
+                        <h6>1 - Sabor</h6>
+                        <div style="display: flex; flex-direction: column">
+                            <h6>½ - Sabor 1</h6>
+                            <h6>½ - Sabor 2</h6>
+                        </div>
+                        <div style="display: flex; flex-direction: column">
+                            <h6>¼ - Sabor 1</h6>
+                            <h6>¼ - Sabor 2</h6>
+                            <h6>¼ - Sabor 3</h6>
+                            <h6>¼ - Sabor 4</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         
     </p-card>
 </div>
 
-
-<h1>TESTE</h1>
+<p-dialog  [(visible)]="display" [style]="{width: '50vw'}" [modal]="true" [draggable]="false" [resizable]="false">
+     <ng-template pTemplate="header">
+        <h3>Selecione Outro Sabor</h3>  
+    </ng-template>
+    <p-table >
+        <ng-template pTemplate="caption">
+            <div class="flex align-items-center justify-content-between">
+                Products
+                <p-button icon="pi pi-refresh"></p-button>
+            </div>
+        </ng-template>
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Name</th>
+                <th>Image</th>
+                <th>Price</th>
+                <th>Category</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+            <tr>
+                <td>BLABLABL</td>
+                <td><img [src]="'assets/showcase/images/demo/product/' + product.image" [alt]="product.name" width="100" class="shadow-4" /></td>
+                <td>{{19999 | currency:'USD'}}</td>
+                <td>sauihiuhsadiusdh</td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="summary">
+            <div class="flex align-items-center justify-content-between">
+                In total there are 10 products.
+            </div>
+        </ng-template>
+    </p-table>
+</p-dialog>

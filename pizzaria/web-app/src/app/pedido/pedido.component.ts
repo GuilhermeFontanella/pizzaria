@@ -18,6 +18,9 @@ export class PedidoComponent implements OnInit {
   chartOptions: any;
   subscription!: Subscription;
   tamanhoPizza: string = '';
+  values: any[] = [];
+  showContent = false;
+  display: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -62,9 +65,16 @@ export class PedidoComponent implements OnInit {
   }
 
   getDadosPizza(idPizza: number) {
+    let pizzaSelecionada = '';
     this.pizzaService.getPizzaById(idPizza).subscribe((response) => {
-      this.idPizzaSelecionada = response;
+      this.idPizzaSelecionada = response.map((e: any) => e.idPizza);
+      response.forEach((element: any) => pizzaSelecionada = element.nome);
+      this.values.push(pizzaSelecionada);
+      this.showContent = true;
     })
+    console.log('AQUI');    
+    console.log(pizzaSelecionada);
+    
   }
 
   selecionaTamanho(event: any, value: string) {
@@ -106,4 +116,12 @@ export class PedidoComponent implements OnInit {
   };
   }
 
+  showDialog() {
+    this.display = true;
+       
+  }
+
+  teste() {
+    this.showDialog();
+  }
 }

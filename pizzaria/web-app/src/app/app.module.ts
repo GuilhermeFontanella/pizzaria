@@ -27,6 +27,8 @@ import { StepsModule } from 'primeng/steps';
 import { ToastModule } from 'primeng/toast';
 import { ChartModule } from 'primeng/chart';
 import {RadioButtonModule} from 'primeng/radiobutton';
+import {ChipsModule} from 'primeng/chips';
+import {TableModule} from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -57,7 +59,9 @@ import {RadioButtonModule} from 'primeng/radiobutton';
     StepsModule,
     ToastModule,
     ChartModule,
-    RadioButtonModule
+    RadioButtonModule,
+    ChipsModule,
+    TableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
