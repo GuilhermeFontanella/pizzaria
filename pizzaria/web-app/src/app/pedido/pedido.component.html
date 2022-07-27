@@ -65,33 +65,5 @@
      <ng-template pTemplate="header">
         <h3>Selecione Outro Sabor</h3>  
     </ng-template>
-    <p-table >
-        <ng-template pTemplate="caption">
-            <div class="flex align-items-center justify-content-between">
-                Products
-                <p-button icon="pi pi-refresh"></p-button>
-            </div>
-        </ng-template>
-        <ng-template pTemplate="header">
-            <tr>
-                <th>Name</th>
-                <th>Image</th>
-                <th>Price</th>
-                <th>Category</th>
-            </tr>
-        </ng-template>
-        <ng-template pTemplate="body" let-product>
-            <tr>
-                <td>BLABLABL</td>
-                <td><img [src]="'assets/showcase/images/demo/product/' + product.image" [alt]="product.name" width="100" class="shadow-4" /></td>
-                <td>{{19999 | currency:'USD'}}</td>
-                <td>sauihiuhsadiusdh</td>
-            </tr>
-        </ng-template>
-        <ng-template pTemplate="summary">
-            <div class="flex align-items-center justify-content-between">
-                In total there are 10 products.
-            </div>
-        </ng-template>
-    </p-table>
+    
 </p-dialog>

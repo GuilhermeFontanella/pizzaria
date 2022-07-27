@@ -38,6 +38,36 @@
       "usuario": "alane@gmail.com",
       "senha": "1234",
       "id": 3
+    },
+    {
+      "nome": "",
+      "sobrenome": "",
+      "nascimento": "",
+      "celular": "",
+      "email": "",
+      "usuario": "alane@gmail.com",
+      "senha": "1234",
+      "id": 4
+    },
+    {
+      "nome": "",
+      "sobrenome": "",
+      "nascimento": "",
+      "celular": "",
+      "email": "",
+      "usuario": "alane@gmail.com",
+      "senha": "1234",
+      "id": 5
+    },
+    {
+      "nome": "",
+      "sobrenome": "",
+      "nascimento": "",
+      "celular": "",
+      "email": "",
+      "usuario": "alane@gmail.com",
+      "senha": "1234",
+      "id": 6
     }
   ],
   "pizzas": [
