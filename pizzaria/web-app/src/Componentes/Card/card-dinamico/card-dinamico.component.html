@@ -1,0 +1,38 @@
+<p-card type="button" (click)="showDialog()" [style]="{width: '360px'}" styleClass="p-card-shadow">
+    <ng-template pTemplate="header">
+        <div style="text-align: center;">
+            <img alt="Card" src="{{pizzas.image}}" *ngIf="!loading">
+            <p-progressSpinner *ngIf="loading" [style]="{width: '50px', height: '50px'}" styleClass="custom-spinner" strokeWidth="5" fill="var(--surface-ground)" animationDuration=".5s"></p-progressSpinner>
+        </div>
+    </ng-template>
+
+    <ng-template pTemplate="body">
+        <h1 *ngIf="!loading">{{pizzas.nome}}</h1>
+        <div *ngIf="loading">
+            <p-skeleton width="auto" height="2rem" styleClass="mb-2"></p-skeleton>
+            <p-skeleton width="auto" height="1rem" styleClass="mb-2"></p-skeleton>
+            <p-skeleton width="auto" height="1rem" styleClass="mb-2"></p-skeleton>
+            <p-skeleton width="auto" height="1rem" styleClass="mb-2"></p-skeleton>
+            <p-skeleton width="auto" height="1rem" styleClass="mb-2"></p-skeleton>
+        </div>
+        <p *ngIf="!loading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+            quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
+    </ng-template>
+    
+    <ng-template pTemplate="footer">
+        <div class="row">
+            <div style="flex: 1;">
+                <p-skeleton *ngIf="loading" width="auto" height="2rem" styleClass="mb-2"></p-skeleton>           
+                <span *ngIf="!loading" class="text-bold">P {{pizzas.precoP | currency:'BRL' }}</span>
+            </div>
+            <div style="flex: 1;">
+                <p-skeleton *ngIf="loading" width="auto" height="2rem" styleClass="mb-2"></p-skeleton>
+                <span *ngIf="!loading" class="text-bold">M {{pizzas.precoM | currency:'BRL' }}</span> 
+            </div>
+            <div style="flex: 1;">
+                <p-skeleton *ngIf="loading" width="auto" height="2rem" styleClass="mb-2"></p-skeleton>
+                <span *ngIf="!loading" class="text-bold">G {{pizzas.precoG | currency:'BRL' }}</span>
+            </div>   
+        </div>
+    </ng-template>
+</p-card>

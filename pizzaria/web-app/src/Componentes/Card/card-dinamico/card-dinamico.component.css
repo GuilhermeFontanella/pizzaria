@@ -1,0 +1,19 @@
+img {
+    height: 200px;
+    border-radius: 5px;
+}
+
+p-card {
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px gray;
+    margin-bottom: 4rem;
+}
+
+p-card:hover { 
+    transition: 500ms;
+    transform:scale3d(1.05, 1.05, 1.05);
+}
+ 
+::ng-deep .custom-spinner {
+    margin-top: 40px !important;
+}

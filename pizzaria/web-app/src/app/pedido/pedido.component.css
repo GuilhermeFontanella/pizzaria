@@ -1,0 +1,7 @@
+::ng-deep .p-chips {
+    width: 80% !important;
+}
+
+::ng-deep .p-chips-multiple-container {
+    width: 100%;
+}

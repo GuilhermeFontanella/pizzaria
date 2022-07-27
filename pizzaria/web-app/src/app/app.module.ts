@@ -1,25 +1,33 @@
+import { CardapioModule } from './cardapio/cardapio.module';
 
 import { MenuComponent } from './menu/menu.component';
-import { RouterModule } from '@angular/router';
-import { Input, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { DialogModule } from 'primeng/dialog';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
-import { Ripple, RippleModule } from 'primeng/ripple';
+import { RippleModule } from 'primeng/ripple';
 import { LoginComponent } from './login/login.component';
+import { FormsModule,  } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { InputTextModule } from 'primeng/inputtext';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PasswordModule } from 'primeng/password';
 import { InputMaskModule } from 'primeng/inputmask';
-import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenubarModule } from 'primeng/menubar';
 import { CardapioComponent } from './cardapio/cardapio.component';
 import { UnidadesComponent } from './unidades/unidades.component';
+import { PedidoComponent } from './pedido/pedido.component';
+import { SkeletonModule } from 'primeng/skeleton';
+import { StepsModule } from 'primeng/steps';
+import { ToastModule } from 'primeng/toast';
+import { ChartModule } from 'primeng/chart';
+import {RadioButtonModule} from 'primeng/radiobutton';
+import {ChipsModule} from 'primeng/chips';
 
 @NgModule({
   declarations: [
@@ -27,8 +35,8 @@ import { UnidadesComponent } from './unidades/unidades.component';
     LoginComponent,
     CadastroComponent,
     MenuComponent,
-    CardapioComponent,
     UnidadesComponent,
+    PedidoComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,6 +53,13 @@ import { UnidadesComponent } from './unidades/unidades.component';
     BrowserAnimationsModule,
     MenubarModule,
     DialogModule,
+    CardapioModule,
+    SkeletonModule,
+    StepsModule,
+    ToastModule,
+    ChartModule,
+    RadioButtonModule,
+    ChipsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

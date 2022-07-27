@@ -1,9 +1,14 @@
 <div class="container">
     <p-card class="pcard">
-       <a href="http://localhost:4200"><button id="botaoicone" pButton pRipple type="button" icon="pi pi-angle-left"
-            class="p-button-rounded p-button-danger p-button-text"></button> </a> <br />
+        <div class="row" style="margin-bottom: -40px;">
+            <div class="col-6">
+                
+                <h2>Cadastro</h2>
+            </div>
+        </div>
+        <br />
 
-        <em>Digite seus dados para continuar</em><br />
+        <em></em><br />
         <div class="row">
             <div class="p-fluid grid col-12">
                 <label for="name">Nome</label><br />
@@ -54,8 +59,11 @@
                 </div>
             </div>
             <br />
-            <div class="p-fluid grid col-12">
-                <button (click)="cadastrar()" pButton pRipple type="button" label="Continuar" class="p-button-danger"></button>
+            <div class="p-fluid grid row">
+                <div class="col-12" style="display: flex;">
+                    <button (click)="cadastrar()" pButton pRipple type="button" label="Cadastrar" class="p-button-success" style="flex: 3; margin-right: 20px;"></button>
+                    <button (click)="cadastrar()" pButton pRipple type="button" label="Voltar" class="p-button-primary" style="flex: 1;"></button>
+                </div>
             </div>
         </div>
     </p-card>

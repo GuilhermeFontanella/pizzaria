@@ -1,0 +1,69 @@
+<div class="container" style="margin-top: 30px;">
+    <p-card>
+        <div class="row">
+            <div class="col-12">
+                <p-steps [model]="items" [readonly]="true"></p-steps>
+            </div>
+        </div>
+        <div class="row" >
+            <div style="display: flex; flex-direction: row; justify-content: center; margin-top: 30px; margin-bottom: 30px;">
+                <div class="field-radiobutton" style="margin-right: 30px;" pTooltip="Apenas 1 Sabor" tooltipPosition="bottom" [showDelay]="500">
+                    <p-radioButton value="p" [(ngModel)]="tamanhoPizza" inputId="Pequena" (click)="selecionaTamanho($event, tamanhoPizza)"></p-radioButton>
+                    <label for="city1" style="padding-left: 5px;">Pequena</label>
+                </div>
+                <div class="field-radiobutton" style="margin-right: 30px;" pTooltip="Até 2 Sabores" tooltipPosition="bottom" [showDelay]="500">
+                    <p-radioButton value="m" [(ngModel)]="tamanhoPizza" inputId="Média" (click)="selecionaTamanho($event, tamanhoPizza)"></p-radioButton>
+                    <label for="city2" style="padding-left: 5px;">Média</label>
+                </div>
+                <div class="field-radiobutton" style="margin-right: 30px;" pTooltip="Até 2 Sabores" tooltipPosition="bottom" [showDelay]="500">
+                    <p-radioButton value="g" [(ngModel)]="tamanhoPizza" inputId="Grande" (click)="selecionaTamanho($event, tamanhoPizza)"></p-radioButton>
+                    <label for="city3" style="padding-left: 5px;">Grande</label>
+                </div>
+                <div class="field-radiobutton" pTooltip="Até 4 Sabores" tooltipPosition="bottom" [showDelay]="500">
+                    <p-radioButton value="gg" [(ngModel)]="tamanhoPizza" inputId="Gigante" (click)="selecionaTamanho($event, tamanhoPizza)"></p-radioButton>
+                    <label for="city3" style="padding-left: 5px;">Gigante</label>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-7" style="max-width: 40%; margin: auto">
+                <p-chart type="pie" [data]="data" [options]="chartOptions"  [style]="{'width': '40%'}"></p-chart>
+            </div>
+            <div class="col-5">
+                <div class="header">
+                    <h1>Sabores Selecionados:</h1>
+                </div>
+                <div>
+                    <p-chips [(ngModel)]="values" *ngIf="showContent" (onFocus)="teste()"></p-chips>
+                </div>
+                <div class="row">
+                    <div class="col-12" style="margin-top: 30px;">
+                        <h5>Resumo do Pedido:</h5>
+                        <h6>1 - Sabor</h6>
+                        <div style="display: flex; flex-direction: column">
+                            <h6>½ - Sabor 1</h6>
+                            <h6>½ - Sabor 2</h6>
+                        </div>
+                        <div style="display: flex; flex-direction: column">
+                            <h6>¼ - Sabor 1</h6>
+                            <h6>¼ - Sabor 2</h6>
+                            <h6>¼ - Sabor 3</h6>
+                            <h6>¼ - Sabor 4</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </p-card>
+</div>
+
+<p-dialog  [(visible)]="display" [style]="{width: '50vw'}" [modal]="true" [draggable]="false" [resizable]="false">
+     <ng-template pTemplate="header">
+        <h3>Selecione Outro Sabor</h3>  
+    </ng-template>
+    
+</p-dialog>

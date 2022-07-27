@@ -1,53 +1,41 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12" style="margin-top: 1rem; margin-bottom: 1rem;">
+            <h1 class="header-white">Cardápio</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4"*ngFor="let pizza of pizzas" >
+            <app-card-dinamico [pizzas]="pizza" (click)="showDialog(pizza)" class="animate__slideOutUp"></app-card-dinamico>
+        </div>
+    </div>
+</div>
 
-<p-card subheader="Pizza calabresa" type="button" (click)="showDialog()" [style]="{width: '360px'}" styleClass="p-card-shadow">
-    <ng-template pTemplate="header">
-        <img alt="Card" src="">
-    </ng-template>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-        quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
-    
-    <ng-template pTemplate="footer">
-        A partir de R$ 100,00
-    </ng-template>
-</p-card>
-
-<p-dialog  [(visible)]="display" [style]="{width: '75vw'}">
-        <header>primeiro card</header>
+<p-dialog  [(visible)]="display" [style]="{width: '30vw'}" [modal]="true" [draggable]="false" [resizable]="false">
         <ng-template pTemplate="header">
-            <img  src="">
+            <h1>{{dadosModal.nome}}</h1>  
         </ng-template>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+        <img src="../../assets/imagemPizzas/pizzaCalabresa.jpg" style="width: 80%; margin: auto; display: flex; margin-bottom: 1rem;">
+        <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
             quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
-        
         <ng-template pTemplate="footer">
-            A partir de R$ 100,00
+            <span style="color: rgb(34, 175, 34);">
+                <div style="display: flex; justify-content:space-around;">
+            <span class="span-dialog" pTooltip="Selecionar Tamanho" tooltipPosition="bottom" [showDelay]="300" (click)="iniciarPedido(dadosModal, 'p')">
+                P <span class="text-bold">{{dadosModal.precoP | currency:'BRL' }}</span>
+            </span>
+            <span class="span-dialog" pTooltip="Selecionar Tamanho" tooltipPosition="bottom" [showDelay]="300" (click)="iniciarPedido(dadosModal, 'm')">
+                M <span class="text-bold">{{dadosModal.precoM | currency:'BRL' }}</span>
+            </span>
+            <span class="span-dialog" pTooltip="Selecionar Tamanho" tooltipPosition="bottom" [showDelay]="300" (click)="iniciarPedido(dadosModal, 'g')">
+                G <span class="text-bold">{{dadosModal.precoG | currency:'BRL' }}</span>
+            </span>
+            <span class="span-dialog" pTooltip="Selecionar Tamanho" tooltipPosition="bottom" [showDelay]="300" (click)="iniciarPedido(dadosModal, 'gg')">
+                GG <span class="text-bold">{{dadosModal.precoG | currency:'BRL' }}</span>
+            </span>
+        </div>
+            </span>
         </ng-template>
 </p-dialog>
 
 
-
-<p-card subheader="Pizza de Frango" type="button" (click)="showDialog()" [style]="{width: '360px'}" styleClass="p-card-shadow">
-    <ng-template pTemplate="header">
-        <img alt="Card" src="">
-    </ng-template>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-        quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
-        
-     <ng-template pTemplate="footer">
-         A partir de R$ 100,00
-    </ng-template>
-</p-card>
-    
-<p-dialog  [(visible)]="display" [style]="{width: '75vw'}">
-     <header>Segundo Card</header>
-     <ng-template pTemplate="header">
-        <img  src="">
-     </ng-template>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-             quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
-            
-     <ng-template pTemplate="footer">
-        A partir de R$ 100,00
-     </ng-template>
-</p-dialog>
-    
