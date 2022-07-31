@@ -36,7 +36,7 @@
                     <h1>Sabores Selecionados:</h1>
                 </div>
                 <div>
-                    <p-chips [(ngModel)]="values" *ngIf="showContent" (onFocus)="teste()"></p-chips>
+                    <p-chips [(ngModel)]="values" *ngIf="showContent" (onFocus)="selecionarMaisSabores()"></p-chips>
                 </div>
                 <div class="row">
                     <div class="col-12" style="margin-top: 30px;">
@@ -63,7 +63,32 @@
 
 <p-dialog  [(visible)]="display" [style]="{width: '50vw'}" [modal]="true" [draggable]="false" [resizable]="false">
      <ng-template pTemplate="header">
-        <h3>Selecione Outro Sabor</h3>  
+        <h5>Selecione Outro Sabor</h5>  
     </ng-template>
-    
+    <div class="row">
+        <div class="col-10" style="display: flex; flex-direction: row;">
+            <div class="col-4">
+                <h5>Sabor</h5>
+            </div>
+            <div class="col-6">
+                <h5>Ingredientes</h5>
+            </div>
+            <div class="col-3">
+                <h5>Preco</h5>
+            </div>
+        </div>
+    </div>
+    <div *ngFor="let p of cardapio" class="field-checkbox">
+        <div class="row">
+            <div class="col-10" style="display: flex; flex-direction: row;">
+                <div class="col-4">
+                    <p-checkbox name="group2" value="p" [value]="p"  [(ngModel)]="selectedCategories" [inputId]="p.id"></p-checkbox>
+                    <label [for]="p.id" style="margin-left: 10px;">{{p.nome}}</label>
+                </div>
+                <div class="col-6"><span>{{p.descricao}}</span></div>
+                <div class="col-3"><span>{{p.precoM}}</span></div>
+            </div>
+            <div style="height: 1px; width: 100%; background-color: rgba(210, 210, 210, 0.768); margin-top: 5px"></div>  
+        </div>
+    </div>
 </p-dialog>
