@@ -28,8 +28,11 @@ import { ToastModule } from 'primeng/toast';
 import { ChartModule } from 'primeng/chart';
 import {RadioButtonModule} from 'primeng/radiobutton';
 import {ChipsModule} from 'primeng/chips';
+
 import { HomeComponent } from './home/home.component';
 import {ProgressSpinnerModule} from 'primeng/progressspinner';
+
+import {CheckboxModule} from 'primeng/checkbox';
 
 @NgModule({
   declarations: [
@@ -64,6 +67,7 @@ import {ProgressSpinnerModule} from 'primeng/progressspinner';
     RadioButtonModule,
     ChipsModule,
     ProgressSpinnerModule,
+    CheckboxModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
