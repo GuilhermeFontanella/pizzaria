@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { CadastroService } from './cadastro.service';
 import { Component, OnInit } from '@angular/core';
 import {of} from 'rxjs';
@@ -29,7 +30,8 @@ export class CadastroComponent implements OnInit {
   senha:string="";
   
   constructor(
-    private cadastroService: CadastroService
+    private cadastroService: CadastroService,
+    private router:Router
     ) { }
 
   ngOnInit(): void {}
@@ -46,5 +48,8 @@ export class CadastroComponent implements OnInit {
     }
     this.cadastroService.cadastrarUsuario(this.novoUsuario).subscribe(()=>{console.log(this.novoUsuario)});
 
+  }
+  voltar():void{
+    this.router.navigate(['/login'])
   }
 }

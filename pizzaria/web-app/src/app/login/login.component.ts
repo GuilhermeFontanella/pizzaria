@@ -38,4 +38,8 @@ export class LoginComponent implements OnInit {
       }
     })
   }
+
+  voltar():void{
+    this.router.navigate(['/'])
+  }
 }

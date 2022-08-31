@@ -1,0 +1,115 @@
+<!-- Card Combo-->
+<p-card type="button" [style]="{width: '360px'}" styleClass="p-card-shadow">   
+        <ng-template pTemplate="header">
+            <div *ngIf="tipoCard == 'combo' ">
+            <div style="text-align: center;">
+                <img alt="Card" src="" *ngIf="!loading">
+                <p-progressSpinner *ngIf="loading" [style]="{width: '50px', height: '50px'}" styleClass="custom-spinner"
+                    strokeWidth="5" fill="var(--surface-ground)" animationDuration=".5s"></p-progressSpinner>
+            </div>
+        </div>
+        </ng-template>
+
+        <ng-template pTemplate="body">
+            <div *ngIf="tipoCard == 'combo' ">
+            <h1 *ngIf="!loading">Combo</h1>
+            <div *ngIf="loading">
+                <p-skeleton width="auto" height="2rem" styleClass="mb-2"></p-skeleton>
+                <p-skeleton width="auto" height="1rem" styleClass="mb-2"></p-skeleton>
+                <p-skeleton width="auto" height="1rem" styleClass="mb-2"></p-skeleton>
+                <p-skeleton width="auto" height="1rem" styleClass="mb-2"></p-skeleton>
+                <p-skeleton width="auto" height="1rem" styleClass="mb-2"></p-skeleton>
+            </div>
+            <p *ngIf="!loading">Descrição</p>
+        </div>
+        </ng-template>
+
+        <ng-template pTemplate="footer">
+            <div *ngIf="tipoCard == 'combo' ">
+            <div class="row">
+                <div style="flex: 1;">
+                    <p-skeleton *ngIf="loading" width="auto" height="2rem" styleClass="mb-2"></p-skeleton>
+                    <span *ngIf="!loading" class="text-bold"> Serve 3 pessoas</span>
+                </div>
+                <div style="flex: 1;">
+                    <p-skeleton *ngIf="loading" width="auto" height="2rem" styleClass="mb-2"></p-skeleton>
+                    <span *ngIf="!loading" class="text-bold">A partir de 59,90 </span>
+                </div>
+
+            </div>
+        </div>
+        </ng-template>
+</p-card>
+
+
+<!-- Card Cardapio-->
+<p-card type="button" [style]="{width: '360px'}" styleClass="p-card-shadow">   
+    <ng-template pTemplate="header">
+        <div *ngIf="tipoCardapio == 'cardapio' ">
+        <div style="text-align: center;">
+            <img alt="Card" src="" *ngIf="!loading">
+            <p-progressSpinner *ngIf="loading" [style]="{width: '50px', height: '50px'}" styleClass="custom-spinner"
+                strokeWidth="5" fill="var(--surface-ground)" animationDuration=".5s"></p-progressSpinner>
+        </div>
+    </div>
+    </ng-template>
+
+    <ng-template pTemplate="body">
+        <div *ngIf="tipoCardapio == 'cardapio' ">
+        <h1 *ngIf="!loading">Cardapio</h1>
+        <div *ngIf="loading">
+            <p-skeleton width="auto" height="2rem" styleClass="mb-2"></p-skeleton>
+            <p-skeleton width="auto" height="1rem" styleClass="mb-2"></p-skeleton>
+        </div>
+        <p *ngIf="!loading">Descrição</p>
+    </div>
+    </ng-template>
+
+    <ng-template pTemplate="footer">
+        <div *ngIf="tipoCardapio == 'cardapio' ">
+        <div class="row">
+            <div style="flex: 1;">
+                <p-skeleton *ngIf="loading" width="auto" height="2rem" styleClass="mb-2"></p-skeleton>
+                <span *ngIf="!loading" class="text-bold"> Conheça nosso Cardapio</span>
+            </div>
+        </div>
+    </div>
+    </ng-template>
+</p-card>
+
+
+<!-- Card Cardapio-->
+
+<p-card type="button" [style]="{width: '360px'}" styleClass="p-card-shadow">   
+    <ng-template pTemplate="header">
+        <div *ngIf="tipoUnidades == 'unidades' ">
+        <div style="text-align: center;">
+            <img alt="Card" src="" *ngIf="!loading">
+            <p-progressSpinner *ngIf="loading" [style]="{width: '50px', height: '50px'}" styleClass="custom-spinner"
+                strokeWidth="5" fill="var(--surface-ground)" animationDuration=".5s"></p-progressSpinner>
+        </div>
+    </div>
+    </ng-template>
+
+    <ng-template pTemplate="body">
+        <div *ngIf="tipoUnidades == 'unidades' ">
+        <h1 *ngIf="!loading">Unidades</h1>
+        <div *ngIf="loading">
+            <p-skeleton width="auto" height="2rem" styleClass="mb-2"></p-skeleton>
+            <p-skeleton width="auto" height="1rem" styleClass="mb-2"></p-skeleton>
+        </div>
+        <p *ngIf="!loading">Descrição</p>
+    </div>
+    </ng-template>
+
+    <ng-template pTemplate="footer">
+        <div *ngIf="tipoUnidades == 'unidades' ">
+        <div class="row">
+            <div style="flex: 1;">
+                <p-skeleton *ngIf="loading" width="auto" height="2rem" styleClass="mb-2"></p-skeleton>
+                <span *ngIf="!loading" class="text-bold"> Conheça nossas Unidades</span>
+            </div>
+        </div>
+    </div>
+    </ng-template>
+</p-card>

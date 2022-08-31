@@ -6,6 +6,7 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/cor
   styleUrls: ['./card-dinamico.component.css']
 })
 export class CardDinamicoComponent implements OnInit, OnChanges {
+  
   @Input() pizzas:any;
   @Input() loading: boolean = true;
   display = true;

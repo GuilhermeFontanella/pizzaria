@@ -1,14 +1,12 @@
 <div class="container">
     <p-card class="pcard">
-        <div class="row" style="margin-bottom: -40px;">
-            <div class="col-6">
-                
+        
+        <div class="row" style="margin-bottom:15px;">        
+            <div class="col-6">                
                 <h2>Cadastro</h2>
             </div>
         </div>
-        <br />
-
-        <em></em><br />
+       
         <div class="row">
             <div class="p-fluid grid col-12">
                 <label for="name">Nome</label><br />
@@ -21,7 +19,7 @@
 
             <div class="row">
                 <div class="p-fluid grid col-6">
-                    <label for="date">Data de nascimento</label><br />
+                    <label for="date">Data de nascimento</label>
                     <p-inputMask [(ngModel)]="nascimento" id="date" mask="99/99/9999" placeholder="99/99/9999" slotChar="mm/dd/yyyy">
                     </p-inputMask>
                 </div>
@@ -50,7 +48,7 @@
 
             <div class="row">
                 <div class="p-fluid grid col-6">
-                    <label for="password">Digite sua senha</label><br />
+                    <label for="password">Digite sua senha</label>
                     <p-password [(ngModel)]="senha" id="password" [toggleMask]="true"></p-password>
                 </div>
                 <div class="p-fluid grid col-6">
@@ -60,9 +58,9 @@
             </div>
             <br />
             <div class="p-fluid grid row">
-                <div class="col-12" style="display: flex;">
+                <div class="col-12" style="display: flex; padding-top: 20px;">
                     <button (click)="cadastrar()" pButton pRipple type="button" label="Cadastrar" class="p-button-success" style="flex: 3; margin-right: 20px;"></button>
-                    <button (click)="cadastrar()" pButton pRipple type="button" label="Voltar" class="p-button-primary" style="flex: 1;"></button>
+                    <button (click)="voltar()" pButton pRipple type="button" label="Voltar" class="p-button-primary" style="flex: 1;"></button>
                 </div>
             </div>
         </div>

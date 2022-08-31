@@ -20,6 +20,7 @@ export class MenuComponent implements OnInit {
       {
         label: 'Inicio', 
         icon:' pi pi-home',
+        url:'http://localhost:4200'
       },
       {
         label: 'Cardápio',
@@ -38,7 +39,7 @@ export class MenuComponent implements OnInit {
       {
         label: 'Entrar/Cadastrar',
         icon:' pi pi-user',
-        url:'http://localhost:4200',
+        url:'http://localhost:4200/login',
       },
       {
         icon:' pi pi-instagram',

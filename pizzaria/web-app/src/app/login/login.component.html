@@ -1,7 +1,12 @@
 <div class="container">
             <p-card class="pcard"> 
                 <div class="row">
-                    <button id="botaoicone" pButton pRipple type="button" icon="pi pi-angle-left" class="p-button-rounded p-button-danger p-button-text"></button>
+
+                    <div class="row" style="margin-bottom:15px;">        
+                        <div class="col-6">                
+                            <h2>Bem-vindo</h2>
+                        </div>
+                    </div>                 
                     <div *ngIf="!usuarioCadastrado" class="p-fluid grid col-12" style="margin:15px 0px 15px 0px"> 
                         <span class="p-float-label">                 
                             <input [(ngModel)]="email" type="text" pInputText>
@@ -9,7 +14,7 @@
                         </span>
                     </div>
                     <div *ngIf="usuarioCadastrado" class="p-fluid grid col-12"> 
-                        <button id="botaoicone" pButton pRipple type="button" icon="pi pi-angle-left" class="p-button-rounded p-button-danger p-button-text"></button>
+                        <button id="botaoicone" pButton pRipple type="button" icon="pi pi-angle-left" class="p-button-rounded p-button-danger p-button-text" (click)="voltar()"></button>
                         <span class="p-float-label">
                                                
                             <input [(ngModel)]="password" type="password" pInputText>
