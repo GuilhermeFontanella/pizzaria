@@ -12,8 +12,13 @@ let PedidoComponent = class PedidoComponent {
         this.values = [];
         this.showContent = false;
         this.display = false;
+        this.selectedCategories = ['Technology', 'Sports'];
+        this.categories = [{ name: 'Accounting', key: 'A' }, { name: 'Marketing', key: 'M' }, { name: 'Production', key: 'P' }, { name: 'Research', key: 'R' }];
+        this.checked = false;
+        this.cardapio = [];
     }
     ngOnInit() {
+        this.selectedCategories = this.categories.slice(1, 3);
         this.items = [
             { label: 'Tamanho e Sabores' },
             { label: 'Adicionais e Borda' },
@@ -59,6 +64,12 @@ let PedidoComponent = class PedidoComponent {
     selecionaTamanho(event, value) {
         this.defineQtSabores(value);
     }
+    getCardapioPizzas() {
+        this.pizzaService.getListaPizzas().subscribe((response) => {
+            this.cardapio = response;
+            console.log(this.cardapio);
+        });
+    }
     defineQtSabores(tamanhoPizza) {
         let tamanho = this.data.datasets[0].data;
         if (tamanhoPizza === 'p') {
@@ -93,7 +104,8 @@ let PedidoComponent = class PedidoComponent {
     showDialog() {
         this.display = true;
     }
-    teste() {
+    selecionarMaisSabores() {
+        this.getCardapioPizzas();
         this.showDialog();
     }
 };

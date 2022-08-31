@@ -29,6 +29,7 @@ import { ChartModule } from 'primeng/chart';
 import {RadioButtonModule} from 'primeng/radiobutton';
 import {ChipsModule} from 'primeng/chips';
 import {CheckboxModule} from 'primeng/checkbox';
+import {AccordionModule} from 'primeng/accordion';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import {CheckboxModule} from 'primeng/checkbox';
     ChartModule,
     RadioButtonModule,
     ChipsModule,
-    CheckboxModule
+    CheckboxModule,
+    AccordionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

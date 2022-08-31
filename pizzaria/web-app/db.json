@@ -97,7 +97,7 @@
     },
     {
       "id": 3,
-      "nome": "Calabresa",
+      "nome": "Parma",
       "precoP": 55.55,
       "precoM": 65.55,
       "precoG": 75.55,
@@ -105,7 +105,7 @@
     },
     {
       "id": 4,
-      "nome": "Frango",
+      "nome": "Frango com Requeijão",
       "precoP": 55.55,
       "precoM": 65.55,
       "precoG": 75.55,
@@ -113,7 +113,7 @@
     },
     {
       "id": 5,
-      "nome": "Presunto",
+      "nome": "Napolitana",
       "precoP": 30.33,
       "precoM": 65.55,
       "precoG": 75.55,
@@ -121,7 +121,7 @@
     },
     {
       "id": 6,
-      "nome": "Calabresa",
+      "nome": "Californiana",
       "precoP": 55.55,
       "precoM": 65.55,
       "precoG": 75.55,
@@ -129,7 +129,7 @@
     },
     {
       "id": 7,
-      "nome": "Frango",
+      "nome": "Peperoni",
       "precoP": 55.55,
       "precoM": 65.55,
       "precoG": 75.55,
@@ -137,7 +137,7 @@
     },
     {
       "id": 8,
-      "nome": "Presunto",
+      "nome": "Milho",
       "precoP": 30.33,
       "precoM": 65.55,
       "precoG": 75.55,
