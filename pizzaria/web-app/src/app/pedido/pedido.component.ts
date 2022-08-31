@@ -21,19 +21,20 @@ export class PedidoComponent implements OnInit {
   values: any[] = [];
   showContent = false;
   display: boolean = false;
-
-  selectedCategories: any[] = ['Technology', 'Sports'];
-  categories: any[] = [{name: 'Accounting', key: 'A'}, {name: 'Marketing', key: 'M'}, {name: 'Production', key: 'P'}, {name: 'Research', key: 'R'}];
+  pizzasSelecionadas: any[] = [];
   checked: boolean = false;
   cardapio: any[] = [];
+  qtSaboresRestantesPSelecao: number = 0;
+  opcoesDesabilitadas: boolean = false;
+  activeIndex = 0;
 
   constructor(
     private route: ActivatedRoute,
-    private pizzaService: PizzaService
+    private pizzaService: PizzaService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
-    this.selectedCategories = this.categories.slice(1,3);
     this.items = [
       {label: 'Tamanho e Sabores'},
       {label: 'Adicionais e Borda'},
@@ -63,7 +64,6 @@ export class PedidoComponent implements OnInit {
     if (idPizza) {
       this.getDadosPizza(+idPizza);
     }
-
     if (tamanhoPizza) {
       this.tamanhoPizza = tamanhoPizza;
       this.defineQtSabores(tamanhoPizza);
@@ -78,9 +78,6 @@ export class PedidoComponent implements OnInit {
       this.values.push(pizzaSelecionada);
       this.showContent = true;
     })
-    console.log('AQUI');    
-    console.log(pizzaSelecionada);
-    
   }
 
   selecionaTamanho(event: any, value: string) {
@@ -112,19 +109,7 @@ export class PedidoComponent implements OnInit {
     this.data = {
       //labels: ['A','B'],
       datasets: [
-          {
-            data: tamanho,
-            backgroundColor: [
-                "#adadad",
-                "#adadad",
-
-            ],
-            hoverBackgroundColor: [
-                "#dddddd",
-                "#dddddd",
-
-            ]
-          }
+        { data: tamanho, backgroundColor: [ "#adadad", "#adadad" ], hoverBackgroundColor: [ "#dddddd", "#dddddd" ] }
       ]
     };
   }
@@ -133,8 +118,43 @@ export class PedidoComponent implements OnInit {
     this.display = true;
   }
 
+  closeModal() {
+    this.display = false;
+  }
+
   selecionarMaisSabores() {
     this.getCardapioPizzas();
     this.showDialog();
+    this.verificaQtSaboresDisponieisPSelecao();
+    this.pizzasSelecionadas.push(...this.values);
+    let index = this.pizzasSelecionadas.findIndex((e) => e === e);
+    this.pizzasSelecionadas = this.pizzasSelecionadas.slice(index, index+1);
+  }
+
+  verificaQtSaboresDisponieisPSelecao(pizzasSelecionadas?: any[]) {
+    let number: number = pizzasSelecionadas?.length ? pizzasSelecionadas?.length : this.values.length;
+    if (this.tamanhoPizza === 'p') {
+      this.qtSaboresRestantesPSelecao = 1 - number;
+    }
+    if (this.tamanhoPizza === 'm' || this.tamanhoPizza === 'g') {
+      this.qtSaboresRestantesPSelecao = 2 - number;
+    }
+    if (this.tamanhoPizza === 'gg') {
+      this.qtSaboresRestantesPSelecao = 4 - number;
+    }
+  }
+
+  selecionaSabor(event: any) {
+    this.pizzasSelecionadas = event.checked
+    this.values = event.checked;
+    this.verificaQtSaboresDisponieisPSelecao(this.pizzasSelecionadas);
+  }
+
+  proximoPasso() {
+    this.activeIndex = 1
+  }
+
+  mudaPasso(event: any) {
+    this.activeIndex = event;
   }
 }

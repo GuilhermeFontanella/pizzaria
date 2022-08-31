@@ -27,6 +27,7 @@ import { ToastModule } from 'primeng/toast';
 import { ChartModule } from 'primeng/chart';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { ChipsModule } from 'primeng/chips';
+import { CheckboxModule } from 'primeng/checkbox';
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -61,6 +62,7 @@ AppModule = __decorate([
             ChartModule,
             RadioButtonModule,
             ChipsModule,
+            CheckboxModule
         ],
         providers: [],
         bootstrap: [AppComponent]

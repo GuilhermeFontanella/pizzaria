@@ -33,6 +33,7 @@ import { HomeComponent } from './home/home.component';
 import {ProgressSpinnerModule} from 'primeng/progressspinner';
 
 import {CheckboxModule} from 'primeng/checkbox';
+import {AccordionModule} from 'primeng/accordion';
 
 @NgModule({
   declarations: [
@@ -66,8 +67,7 @@ import {CheckboxModule} from 'primeng/checkbox';
     ChartModule,
     RadioButtonModule,
     ChipsModule,
-    ProgressSpinnerModule,
-    CheckboxModule,
+    CheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
