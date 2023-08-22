@@ -17,6 +17,6 @@ export class CadastroService {
    }
 
    teste(): Observable<any> {
-    return this.httpClient.get<any>(`${environment.apiUrl}/livros`);
+    return this.httpClient.get<any>(`${environment.apiUrl}livros`);
    }
 }
