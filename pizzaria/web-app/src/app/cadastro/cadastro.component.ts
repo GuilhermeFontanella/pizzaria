@@ -31,7 +31,11 @@ export class CadastroComponent implements OnInit {
     private cadastroService: CadastroService
     ) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.cadastroService.teste().subscribe({
+      next: resp => console.log(resp)
+    })
+  }
 
   cadastrar(): void {
     this.novoUsuario= {

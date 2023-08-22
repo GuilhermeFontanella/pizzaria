@@ -15,4 +15,8 @@ export class CadastroService {
    cadastrarUsuario(usuario:any): Observable<any> {
     return this.httpClient.post<any>(`${environment.apiUrl}/usuarios`, usuario);
    }
+
+   teste(): Observable<any> {
+    return this.httpClient.get<any>(`${environment.apiUrl}/livros`);
+   }
 }
