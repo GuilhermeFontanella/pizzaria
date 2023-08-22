@@ -1,6 +1,7 @@
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class CadastroService {
   constructor(private httpClient:HttpClient) {
 
    }
-   cadastrarUsuario(usuario:any):Observable<any>{
-    return this.httpClient.post<any>(`${this.apiUrl}/users`,usuario);
+   cadastrarUsuario(usuario:any): Observable<any> {
+    return this.httpClient.post<any>(`${environment.apiUrl}/usuarios`, usuario);
    }
 }

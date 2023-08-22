@@ -6,7 +6,6 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CardapioService {
-  apiUrl:string='http://localhost:3000/pizzas';
 
   constructor(private httpClient:HttpClient) {}
 

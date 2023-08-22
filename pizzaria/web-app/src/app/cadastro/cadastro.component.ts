@@ -3,13 +3,12 @@ import { Component, OnInit } from '@angular/core';
 import {of} from 'rxjs';
 
 export interface Usuario{
-  id?:number;
+  id?:any;
   nome:string;
-  sobrenome:string;
-  nascimento:string;
-  celular:string;
+  sobre_nome:string;
+  data_nascimento:string;
+  telefone:string;
   email:string;
-  usuario:string;
   senha:string;
 }
 
@@ -37,14 +36,15 @@ export class CadastroComponent implements OnInit {
   cadastrar(): void {
     this.novoUsuario= {
       nome:this.nome, 
-      sobrenome:this.sobrenome,
-      nascimento:this.nascimento,
-      celular:this.celular,
+      sobre_nome:this.sobrenome,
+      data_nascimento:this.nascimento,
+      telefone:this.celular,
       email:this.email,
-      usuario:this.usuario,
       senha:this.senha,
     }
-    this.cadastroService.cadastrarUsuario(this.novoUsuario).subscribe(()=>{console.log(this.novoUsuario)});
+    this.cadastroService.cadastrarUsuario(this.novoUsuario).subscribe((response)=>{
+      console.log(response);
+    });
 
   }
 }
