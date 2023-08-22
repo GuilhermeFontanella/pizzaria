@@ -3,6 +3,7 @@ import { Component, OnInit  } from '@angular/core';
 import { ActionTypes, eventDispatcher, store } from '../diretorio/actions';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PizzaService } from 'src/services/pizza.service';
+import { CadastroService } from '../cadastro/cadastro.service';
 
 
 @Component({
@@ -26,7 +27,8 @@ export class CardapioComponent implements OnInit {
     private cardapioService: CardapioService,
     private pizzaService: PizzaService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private cadastroService: CadastroService
     ) {
     store.subscribe((state) => {
       this.searchInputFromMenu = state;
@@ -37,6 +39,9 @@ export class CardapioComponent implements OnInit {
   ngOnInit(): void {
     eventDispatcher.next({ type: ActionTypes.BUCAR });
     this.getListasdePizzas();
+    this.cadastroService.teste().subscribe({
+      next: resp => console.log(resp)
+    })
   }
   
   showDialog(event: {id: number, nome: string, precoP: string, precoM: string, precoG: string}) {
